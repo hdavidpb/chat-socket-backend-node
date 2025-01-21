@@ -22,10 +22,11 @@ const io = new Server(server, {
 io.on("connection",async (socket) => {
   socket.on("message", async (data) => {
     io.emit("message", data);
-    const { message, nickname } = data;
+    const { message, nickname,color } = data;
      await Chat.create({
       message,
       nickname,
+      color
     });
   });
 

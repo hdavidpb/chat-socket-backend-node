@@ -8,6 +8,10 @@ const chatSchema = new mongoose.Schema({
 nickname: {
     type: String,
     required: true,
+},
+color: {
+  type: String,
+  required: true,
 }
 
 },{timestamps:true});
